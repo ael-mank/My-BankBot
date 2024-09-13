@@ -1,0 +1,25 @@
+/* index.css */
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #262d82;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container img {
+    max-width: 100%; /* Cela assure que l'image ne dépasse jamais la taille de son conteneur */
+    height: auto; /* Maintient le ratio de l'image */
+    width: 100px; /* Spécifie une largeur spécifique, que tu peux ajuster selon tes besoins */
+}
+
