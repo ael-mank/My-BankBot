@@ -145,4 +145,8 @@
 	--df-messenger-message-feedback-icon-background-hover: rgba(68, 71, 70, 0.08)
 }
 
+.message-list {
+	background-color: var(--df-messenger-chat-function-call-button-font-color);
+}
+
 /*# sourceMappingURL=df-messenger-default.css.map */
