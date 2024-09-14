@@ -1,9 +1,93 @@
 <!doctype html>
+<meta charset="utf-8">
+
 <html>
 
 <head>
+	<title>ChatBotLCL</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="theme-color" content="#262d82" />
+	<link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
+	<link rel="manifest" href="/site.webmanifest">
+
 	<link rel="stylesheet" href="./df-messenger.css">
 	<script src="https://www.gstatic.com/dialogflow-console/fast/df-messenger/prod/v1/df-messenger.js"></script>
+	<style>
+		body {
+			margin-top: 10px;
+			padding: 0;
+			justify-content: center;
+			align-items: center;
+			background-color: #262d82;
+		}
+
+
+		df-messenger {
+			position: fixed;
+			z-index: 9999;
+			width: 80%;
+			height: 80%;
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%, -50%);
+			transition: all 0.15s ease-out;
+		}
+
+		@media (max-aspect-ratio: 1/1) {
+			df-messenger {
+				width: 100%;
+				height: 95%;
+				padding: 0;
+				padding-top: 5%;
+				margin: 0;
+				margin-bottom: 20px;
+			}
+		}
+
+
+		.top-banner {
+			background-color: #262d82;
+			/* LCL blue color */
+			z-index: 10000;
+			padding: 10px;
+			display: flex;
+			align-items: center;
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+		}
+
+		.top-banner img {
+			height: 40px;
+			/* Adjust the height as needed */
+			margin-right: 20px;
+		}
+
+		.top-banner .buttons {
+			display: flex;
+			gap: 10px;
+		}
+
+		.top-banner .buttons button {
+			background-color: #fff;
+			color: #262d82;
+			border: none;
+			padding: 10px 20px;
+			border-radius: 5px;
+			cursor: pointer;
+			font-size: 14px;
+		}
+
+
+		.container {
+			margin-top: 60px;
+			/* Add margin to avoid overlap with the fixed top banner */
+		}
+	</style>
 </head>
 
 <body>
