@@ -23,7 +23,6 @@
 			background-color: #262d82;
 		}
 
-
 		df-messenger {
 			position: fixed;
 			z-index: 9999;
@@ -35,36 +34,28 @@
 			transition: all 0.15s ease-out;
 		}
 
-		@media (max-aspect-ratio: 1/1) {
-			df-messenger {
-				width: 100%;
-				height: 95%;
-				padding: 0;
-				padding-top: 5%;
-				margin: 0;
-				margin-bottom: 20px;
-			}
-		}
-
-
 		.top-banner {
 			background-color: #262d82;
 			/* LCL blue color */
 			z-index: 10000;
-			padding: 10px;
 			display: flex;
 			align-items: center;
 			position: fixed;
 			top: 0;
 			left: 0;
+			padding: 0;
+			margin: 0;
 			width: 100%;
+			height: 80px;
 			box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 		}
 
-		.top-banner img {
-			height: 40px;
+		.top-banner>img {
+			height: 100%;
 			/* Adjust the height as needed */
-			margin-right: 20px;
+			/* margin-right: 20px; */
+			padding-left: 10px;
+			padding-right: 20px;
 		}
 
 		.top-banner .buttons {
@@ -72,7 +63,7 @@
 			gap: 10px;
 		}
 
-		.top-banner .buttons button {
+		.top-banner.buttons button {
 			background-color: #fff;
 			color: #262d82;
 			border: none;
@@ -84,29 +75,52 @@
 
 
 		.container {
-			margin-top: 60px;
+			width: 100%;
+			height: calc(100% - 80px);
 			/* Add margin to avoid overlap with the fixed top banner */
+		}
+
+		@media (max-aspect-ratio: 1/1), (max-height: 600px) {
+			df-messenger {
+				width: 100%;
+				height: calc(100% - 80px);
+				display: fixed;
+				top: calc(50% + 40px);
+				left: 50%;
+
+				padding: 0;
+				margin: 0;
+
+			}
+		}
+
+		@media (max-height: 600px) {
+			df-messenger {
+				height: calc(100% + 45px);
+				top: calc(50% - 25px);
+			}
 		}
 	</style>
 </head>
 
 <body>
-	<div class="top-banner">
-		<a href="index.html">
+	<div>
+		<div class="top-banner">
 			<img src="./assets/logo.png" alt="LCL Logo">
-		</a>
-		<div class="buttons">
-			<button>Contactez Nous</button>
-			<button>Demander un Prêt</button>
+			<div class="buttons">
+				<button>Contactez Nous</button>
+				<button>Demander un Prêt</button>
+			</div>
 		</div>
-	</div>
-	<div class="container">
-		<df-messenger location="europe-west3" project-id="lcl-hackathon-e12-sbox-92e5"
-			agent-id="abd3f7e6-d647-4bf5-8f70-3bdbf1f7614a" language-code="fr" max-query-length="-1" intent="WELCOME">
-			<df-messenger-chat chat-title="Agent LCL"
-				bot-actor-image="https://media.discordapp.net/attachments/1282738981649518592/1284292772878094427/lionlcl.png?ex=66e61a5a&amp;is=66e4c8da&amp;hm=443d579d70cb5beac82097a2679c74c0c142b18301bafbdd0bfbc68c0eae8e6a&amp;=&amp;format=webp&amp;quality=lossless">
-			</df-messenger-chat>
-		</df-messenger>
+		<div class="container">
+			<df-messenger location="europe-west3" project-id="lcl-hackathon-e12-sbox-92e5"
+				agent-id="abd3f7e6-d647-4bf5-8f70-3bdbf1f7614a" language-code="fr" max-query-length="-1"
+				intent="WELCOME">
+				<df-messenger-chat chat-title="Agent LCL"
+					bot-actor-image="https://media.discordapp.net/attachments/1282738981649518592/1284292772878094427/lionlcl.png?ex=66e61a5a&amp;is=66e4c8da&amp;hm=443d579d70cb5beac82097a2679c74c0c142b18301bafbdd0bfbc68c0eae8e6a&amp;=&amp;format=webp&amp;quality=lossless">
+				</df-messenger-chat>
+			</df-messenger>
+		</div>
 	</div>
 	<script defer src="index.js" type="module"></script>
 	<script defer src="buttons.js"></script>

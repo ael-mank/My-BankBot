@@ -47,7 +47,7 @@
 	--df-messenger-message-stack-spacing: 4px;
 	--df-messenger-input-long-text-warning-display: block;
 	--df-messenger-input-box-background: #fff;
-	--df-messenger-input-padding: 16px 8px 24px 24px;
+	--df-messenger-input-padding: 10px 0px 5px 5px;
 	--df-messenger-input-background: #f3f6fc;
 	--df-messenger-input-border-top: none;
 	--df-messenger-input-box-border: 1px solid var(--df-messenger-border-color);
