@@ -11,7 +11,8 @@
             width: 80%;
             height: 80%;
         }
-		.top-banner {
+
+        .top-banner {
             background-color: #262d82; /* LCL blue color */
             padding: 10px;
             display: flex;
@@ -75,24 +76,44 @@
 
 <body>
     <div class="top-banner">
-        <img src="https://www.lcl.fr/favicon.ico" alt="LCL Logo">
+        <a href="index.html">
+            <img src="./assets/logo.png" alt="LCL Logo">
+        </a>
         <div class="buttons">
             <button>Contactez Nous</button>
             <button>Demander un Prêt</button>
         </div>
     </div>
     <div class="container">
-        <img src="/public/assets/logo.png">
+        <df-messenger location="europe-west3" project-id="lcl-hackathon-e12-sbox-92e5"
+            agent-id="abd3f7e6-d647-4bf5-8f70-3bdbf1f7614a" language-code="fr" max-query-length="-1"
+            intent="WELCOME">
+            <df-messenger-chat chat-title="Agent LCL"
+                bot-actor-image="https://media.discordapp.net/attachments/1282738981649518592/1284292772878094427/lionlcl.png?ex=66e61a5a&amp;is=66e4c8da&amp;hm=443d579d70cb5beac82097a2679c74c0c142b18301bafbdd0bfbc68c0eae8e6a&amp;=&amp;format=webp&amp;quality=lossless"
+                id="df-chat-wrapper">
+            </df-messenger-chat>
+        </df-messenger>
     </div>
     <script defer src="index.js" type="module"></script>
+    <script defer src="buttons.js"></script>
+    <script>
+        window.addEventListener('dfMessengerLoaded', function() {
+            const dfMessenger = document.querySelector('df-messenger');
+            
+            dfMessenger.shadowRoot.querySelector('df-messenger-user-input').addEventListener('keydown', function(event) {
+                if (event.key === 'Enter') {
+                    event.preventDefault();
+                    const userMessage = event.target.value;
+                    const additionalInfo = " [age: 30, job: Engineer, kids: 2]";
+                    const modifiedMessage = userMessage + additionalInfo;
 
-    <df-messenger location="europe-west3" project-id="lcl-hackathon-e12-sbox-92e5"
-        agent-id="abd3f7e6-d647-4bf5-8f70-3bdbf1f7614a" language-code="fr" max-query-length="-1">
-        <df-messenger-chat chat-title="Agent LCL"
-            bot-actor-image="https://media.discordapp.net/attachments/1282738981649518592/1284292772878094427/lionlcl.png?ex=66e61a5a&amp;is=66e4c8da&amp;hm=443d579d70cb5beac82097a2679c74c0c142b18301bafbdd0bfbc68c0eae8e6a&amp;=&amp;format=webp&amp;quality=lossless"
-            id="df-chat-wrapper">
-        </df-messenger-chat>
-    </df-messenger>
+                    // Send the modified message using Dialogflow Messenger's API
+                    dfMessenger.renderCustomText(modifiedMessage);
+                    event.target.value = ''; // Clear the input field
+                }
+            });
+        });
+    </script>
 </body>
 
 </html>

@@ -156,3 +156,49 @@
     border-radius: 50%;
     background-size: cover;
 }
+
+body {
+    margin-top: 10px;
+    padding: 0;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-color: #262d82;
+	
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.container img {
+    max-width: 100%; /* Cela assure que l'image ne dépasse jamais la taille de son conteneur */
+    height: auto; /* Maintient le ratio de l'image */
+    width: 100px; /* Spécifie une largeur spécifique, que tu peux ajuster selon tes besoins */
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 50px;
+}
+
+.button-container button {
+    background-color: #262d82;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.button-container button:hover {
+    background-color: #1a1f5a;
+}q
