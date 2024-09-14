@@ -10,6 +10,9 @@
             position: fixed;
             width: 80%;
             height: 80%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
         }
 
         .top-banner {
@@ -62,16 +65,14 @@
             border-radius: 0 !important; /* Ensure the title bar has no border radius */
             border-top: none !important; /* Ensure the title bar has no border top */
         }
-    </style>
 
-    <title>ChatBotLCL</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#262d82" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
-    <link rel="stylesheet" href="index.css">
+        /* Media query to hide bot-actor-image on phones */
+        @media (max-width: 768px) {
+            df-messenger df-messenger-chat::part(bot-actor-image) {
+                display: none;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -89,31 +90,12 @@
             agent-id="abd3f7e6-d647-4bf5-8f70-3bdbf1f7614a" language-code="fr" max-query-length="-1"
             intent="WELCOME">
             <df-messenger-chat chat-title="Agent LCL"
-                bot-actor-image="https://media.discordapp.net/attachments/1282738981649518592/1284292772878094427/lionlcl.png?ex=66e61a5a&amp;is=66e4c8da&amp;hm=443d579d70cb5beac82097a2679c74c0c142b18301bafbdd0bfbc68c0eae8e6a&amp;=&amp;format=webp&amp;quality=lossless"
-                id="df-chat-wrapper">
+                bot-actor-image="https://media.discordapp.net/attachments/1282738981649518592/1284292772878094427/lionlcl.png?ex=66e61a5a&amp;is=66e4c8da&amp;hm=443d579d70cb5beac82097a2679c74c0c142b18301bafbdd0bfbc68c0eae8e6a&amp;=&amp;format=webp&amp;quality=lossless">
             </df-messenger-chat>
         </df-messenger>
     </div>
     <script defer src="index.js" type="module"></script>
     <script defer src="buttons.js"></script>
-    <script>
-        window.addEventListener('dfMessengerLoaded', function() {
-            const dfMessenger = document.querySelector('df-messenger');
-            
-            dfMessenger.shadowRoot.querySelector('df-messenger-user-input').addEventListener('keydown', function(event) {
-                if (event.key === 'Enter') {
-                    event.preventDefault();
-                    const userMessage = event.target.value;
-                    const additionalInfo = " [age: 30, job: Engineer, kids: 2]";
-                    const modifiedMessage = userMessage + additionalInfo;
-
-                    // Send the modified message using Dialogflow Messenger's API
-                    dfMessenger.renderCustomText(modifiedMessage);
-                    event.target.value = ''; // Clear the input field
-                }
-            });
-        });
-    </script>
 </body>
 
 </html>
