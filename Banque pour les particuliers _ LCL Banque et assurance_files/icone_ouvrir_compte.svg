@@ -1,0 +1,37 @@
+<svg id="ouvrir_un_compte" data-name="ouvrir un compte" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="120" height="120" viewBox="0 0 120 120">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #3b51d5;
+      }
+
+      .cls-2 {
+        fill: #ffc33e;
+      }
+
+      .cls-2, .cls-5 {
+        fill-rule: evenodd;
+      }
+
+      .cls-3 {
+        fill: #fff;
+      }
+
+      .cls-4 {
+        fill: #1f368b;
+      }
+
+      .cls-5 {
+        fill: #ffb325;
+      }
+    </style>
+  </defs>
+  <image id="Arrière-plan" width="120" height="120" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4CAYAAAA5ZDbSAAABG0lEQVR4nO3RARHAQBADoWv9e877YBYLfNt2Yf3V2grGFYwrGFcwrmBcwbiCcQXjCsYVjCsYVzCuYFzBuIJxBeMKxhWMKxhXMK5gXMG4gnEF4wrGFYwrGFcwrmBcwbiCcQXjCsYVjCsYVzCuYFzBuIJxBeMKxhWMKxhXMK5gXMG4gnEF4wrGFYwrGFcwrmBcwbiCcQXjCsYVjCsYVzCuYFzBuIJxBeMKxhWMKxhXMK5gXMG4gnEF4wrGFYwrGFcwrmBcwbiCcQXjCsYVjCsYVzCuYFzBuIJxBeMKxhWMKxhXMK5gXMG4gnEF4wrGFYwrGFcwrmBcwbiCcQXjCsYVjCsYVzCuYFzBuIJxBeMKxhWMKxhXMK5gXMGyu3scxQTsITzO4gAAAABJRU5ErkJggg=="/>
+  <circle class="cls-1" cx="60" cy="60" r="60"/>
+  <path class="cls-2" d="M14,46.543L93.843,27,105,78.457,25.157,98Z"/>
+  <rect class="cls-3" x="23" y="40" width="73" height="45"/>
+  <rect class="cls-4" x="23" y="46" width="73" height="8"/>
+  <path class="cls-5" d="M33,72H74v3H33V72Zm0,0H74v3H33V72Zm0,0H74v3H33V72Z"/>
+  <path class="cls-5" d="M33,66H61v3H33V66Zm0,0H61v3H33V66Zm0,0H61v3H33V66Z"/>
+  <path class="cls-5" d="M82,72h6v5H82V72Zm0,0h6v5H82V72Zm0,0h6v5H82V72Z"/>
+</svg>

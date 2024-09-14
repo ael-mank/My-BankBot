@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<!-- saved from url=(0039)http://127.0.0.1:5500/public/index.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!----> <link rel="stylesheet" href="./ChatBotLCL_files/icon">
+      <link rel="stylesheet" href="./ChatBotLCL_files/css">
+      <style>
+        :root {
+          --df-messenger-default-font-family: 'Google Sans', 'Helvetica Neue',
+            sans-serif;
+          --df-messenger-default-font-size: 14px;
+          --df-messenger-default-font-color: #1f1f1f;
+          --df-messenger-default-secondary-font-color: #757575;
+          --df-messenger-default-icon-font-color: #444746;
+          --df-messenger-default-primary-color: #0b57d0;
+          --df-messenger-default-link-font-color: #0b57d0;
+          --df-messenger-default-link-decoration: underline;
+          --df-messenger-default-focus-color: #1e88e5;
+          --df-messenger-default-focus-color-contrast: #fff;
+          --df-messenger-default-border-color: #e0e0e0;
+          --df-messenger-default-border: 1px solid
+            var(--df-messenger-default-border-color);
+          --df-messenger-default-border-radius: 8px;
+          --df-messenger-default-chat-border-radius: 0;
+          --df-messenger-default-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.24);
+        }
+      </style><link rel="stylesheet" href="./ChatBotLCL_files/df-messenger.css">
+    <script src="./ChatBotLCL_files/df-messenger.js"></script>
+    <style>
+        df-messenger {
+            z-index: 999;
+            position: fixed;
+            width: 80%;
+            height: 80%;
+            --df-messenger-chat-border-radius: 25px !important; /* Define custom variable for chat border radius */
+        }
+
+        .top-banner {
+            background-color: #262d82; /* LCL blue color */
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+        }
+
+        .top-banner img {
+            height: 40px; /* Adjust the height as needed */
+            margin-right: 20px;
+        }
+
+        .top-banner .buttons {
+            display: flex;
+            gap: 10px;
+        }
+
+        .top-banner .buttons button {
+            background-color: #fff;
+            color: #262d82;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        .top-banner .buttons button:hover {
+            background-color: #f1f1f1;
+        }
+
+        .container {
+            margin-top: 60px; /* Add margin to avoid overlap with the fixed top banner */
+        }
+		.buttons
+		{
+			margin-right: 20px;
+		}
+    </style>
+
+    <title>ChatBotLCL</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#262d82">
+    <link rel="apple-touch-icon" sizes="180x180" href="http://127.0.0.1:5500/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="http://127.0.0.1:5500/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="http://127.0.0.1:5500/favicon-16x16.png">
+    <link rel="manifest" href="http://127.0.0.1:5500/site.webmanifest">
+    <link rel="stylesheet" href="./ChatBotLCL_files/index.css">
+</head>
+
+<body>
+    <div class="top-banner">
+        <img src="./ChatBotLCL_files/favicon.ico" alt="LCL Logo">
+        <div class="buttons">
+            <button>Contacter Nous</button>
+            <button>Demander un Prêt</button>
+        </div>
+    </div>
+    <div class="container">
+        <img src="./ChatBotLCL_files/logo.png">
+    </div>
+    <script defer="" src="./ChatBotLCL_files/index.js" type="module"></script>
+
+    <df-messenger location="europe-west3" project-id="lcl-hackathon-e12-sbox-92e5" agent-id="abd3f7e6-d647-4bf5-8f70-3bdbf1f7614a" language-code="fr" max-query-length="-1"><template shadowrootmode="open"><!---->
+      <div class="wrapper">
+        <!--?lit$747793060$--> <!--?lit$747793060$-->
+        <slot></slot>
+      </div>
+    </template>
+        <df-messenger-chat chat-title="Agent LCL" bot-actor-image="https://media.discordapp.net/attachments/1282738981649518592/1284292772878094427/lionlcl.png?ex=66e61a5a&amp;is=66e4c8da&amp;hm=443d579d70cb5beac82097a2679c74c0c142b18301bafbdd0bfbc68c0eae8e6a&amp;=&amp;format=webp&amp;quality=lossless" id="df-chat-wrapper"><template shadowrootmode="open"><!----> <div class="chat-wrapper" role="dialog" aria-label="Agent LCL">
+      <!--?lit$747793060$--> <!--?lit$747793060$--> <slot name="titlebar">
+      <!--
+          Use default titlebar, used if nothing else specified for the slot.
+        -->
+      <df-messenger-titlebar><template shadowrootmode="open"><!---->
+      <div class="titlebar-wrapper">
+        <div id="titlebar-title" class="focus-outline-contrast focus-outset focus-box" tabindex="0">
+          <!--?lit$747793060$--> <!--?lit$747793060$--> <div class="title-text"> <!--?lit$747793060$--><h2 tabindex="-1"><!--?lit$747793060$-->Agent LCL</h2> <!--?lit$747793060$--> </div>
+        </div>
+        <div class="actions">
+          <slot name="action"></slot>
+          <div class="offset"></div>
+        </div>
+      </div>
+    </template>
+        <slot name="titlebar-actions" slot="action"></slot>
+      </df-messenger-titlebar>
+    </slot>
+      <div class="message-list-wrapper">
+        <!--?lit$747793060$--> <div class="error ">
+      <!--?lit$747793060$-->Une erreur s'est produite. Veuillez réessayer.
+    </div> <!--?lit$747793060$--><df-messenger-message-list><template shadowrootmode="open"><!----> <style>
+        @import url(https://fonts.googleapis.com/icon?family=Material+Icons);
+      </style>
+      <div class="message-list-wrapper
+          ">
+        <!--?lit$747793060$--> <div id="message-list" aria-live="polite">
+      <div class="content">
+        <!--?lit$747793060$--><!----> <div class="entry user">
+      <!--?lit$747793060$--> <!--?lit$747793060$--> <df-messenger-utterance class=""><template shadowrootmode="open"><!----> <!--?lit$747793060$--><!----> <div class="message-stack single"> <!--?lit$747793060$--><df-text-message class="single first-child last-child"><template shadowrootmode="open"><!----> <span class="visually-hidden"><!--?lit$747793060$-->Je dis&nbsp;:</span>
+      <div class="message user-message">
+        <!--?lit$747793060$--> <!--?lit$747793060$--><!----> <!--?lit$747793060$-->hey <!--?lit$747793060$--><!--?--><!----><!--?-->
+      </div></template></df-text-message> </div><!---->
+    <!--?lit$747793060$--><!--?--></template></df-messenger-utterance>
+    </div><!----><!----> <div class="entry bot">
+      <!--?lit$747793060$--> <div class="actor-container">
+      <div class="actor">
+        <img src="https://media.discordapp.net/attachments/1282738981649518592/1284292772878094427/lionlcl.png?ex=66e61a5a&amp;is=66e4c8da&amp;hm=443d579d70cb5beac82097a2679c74c0c142b18301bafbdd0bfbc68c0eae8e6a&amp;=&amp;format=webp&amp;quality=lossless">
+      </div>
+    </div> <!--?lit$747793060$--> <df-messenger-utterance class=""><template shadowrootmode="open"><!----> <!--?lit$747793060$--><!----> <div class="message-stack single"> <!--?lit$747793060$--><df-markdown-message class="single first-child last-child"><template shadowrootmode="open"><!----> <style>
+        @import url(https://www.gstatic.com/external_hosted/highlightjs/styles/googlecode.css);
+      </style>
+      <span class="visually-hidden">
+        <!--?lit$747793060$-->L'agent dit&nbsp;:
+      </span>
+      <div class="message bot-message markdown">
+        <!--?lit$747793060$--><p>Bonjour je suis le bot LCL que puis-je faire pour vous</p>
+      </div></template></df-markdown-message> </div><!---->
+    <!--?lit$747793060$--><!--?--></template></df-messenger-utterance>
+    </div><!----> <!--?lit$747793060$-->
+      </div>
+    </div> <!--?lit$747793060$--> <div class="scroll-to-bottom-legacy
+          ">
+        <!--?lit$747793060$--> <button class="scroll-to-bottom-button focus-outline" aria-label="Aller en bas">
+      <span class="material-icons icon">arrow_downward</span>
+      <span class="text"><!--?lit$747793060$-->Aller en bas</span>
+    </button>
+      </div>
+      <div class="scroll-to-bottom ">
+        <!--?lit$747793060$--> <button class="scroll-to-bottom-button focus-outline" aria-label="Aller en bas">
+      <span class="material-icons icon">arrow_downward</span>
+      <span class="text"><!--?lit$747793060$-->Aller en bas</span>
+    </button>
+      </div>
+      </div></template></df-messenger-message-list>
+        <!--?lit$747793060$--><div class="function-call
+          ">
+      <button>
+        <!--?lit$747793060$-->Annuler la tâche
+      </button>
+    </div>
+      </div>
+      <df-messenger-user-input class="border-top"><template shadowrootmode="open"><!----> <style>
+        @import url(https://fonts.googleapis.com/icon?family=Material+Icons);
+      </style>
+      <div class="input-container">
+        <div class="popout-wrapper " aria-hidden="true">
+          <div class="popout error">
+            <span class="material-icons">warning_amber</span>
+            <div><!--?lit$747793060$--></div>
+          </div>
+        </div>
+        <div class="popout-wrapper
+            " aria-hidden="true">
+          <div class="popout warning">
+            <span class="material-icons">error_outline</span>
+            <div><!--?lit$747793060$-->Vous saisissez une requête longue, ce qui peut aboutir à un résultat sans correspondance. Raccourcissez votre requête pour obtenir une réponse plus appropriée.</div>
+          </div>
+        </div>
+        <div class="input-box-wrapper ">
+          <!--?lit$747793060$-->
+          <div class="input-wrapper ">
+            <!--?lit$747793060$--> <div class="input-element-wrapper">
+      <div class="input-content-wrapper">
+        <!--?lit$747793060$--> <textarea class="input-box" rows="1" type="text" aria-label="Parlez à l&#39;agent" placeholder="Posez une question…"></textarea>
+        <!-- Additional elements. -->
+        <!--?lit$747793060$--> <!--?lit$747793060$-->
+      </div>
+      <!--?lit$747793060$-->
+    </div>
+          </div>
+          <div class="send-icon-button-wrapper">
+            <button id="send-icon-button" class="focus-outline focus-inset
+                  " disabled="" aria-label="Envoyer">
+              <svg xmlns="http://www.w3.org/2000/svg" id="send-icon">
+                <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"></path>
+                <path d="M0 0h24v24H0z" fill="none"></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div></template></df-messenger-user-input> <!--?lit$747793060$--> <!--?lit$747793060$--><div class="demo-banner">
+      UI Demo. Not connected to an agent.
+    </div>
+    </div></template>
+        </df-messenger-chat>
+    </df-messenger>
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+
+</body></html>
