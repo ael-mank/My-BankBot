@@ -2,8 +2,8 @@
 	--df-messenger-primary-color: #262d82;
 	--df-messenger-border-color: #f7f7f7;
 	--df-messenger-element-font-color: #444746;
-	--df-messenger-chat-border: 0.07px solid var(--df-messenger-border-color);
-	--df-messenger-chat-background: #262d82;
+	--df-messenger-chat-border: 0px solid var(--df-messenger-border-color);
+	--df-messenger-chat-background: #313994;
 	--df-messenger-chat-padding: 24px 24px 8px 24px;
 	--df-messenger-chat-border-radius: 16px;
 	--df-messenger-chat-scroll-button-enabled-display: flex;
