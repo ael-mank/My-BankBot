@@ -1,6 +1,6 @@
 # **My BankBot**
 
-![screenshot](image.png)
+![screenshot](./public/assets/image.png)
 
 ## **Overview**
 **BankBot** is an AI-powered chatbot built to assist bank customers with **credit card inquiries** and **credit card management**. By leveraging **Firebase**, **Vertex AI**, and **Dialogflow CX**, the bot provides users with a seamless experience for managing their credit cards. The frontend is developed using **JavaScript**, ensuring smooth and intuitive user interactions.
