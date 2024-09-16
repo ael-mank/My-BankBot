@@ -1,5 +1,7 @@
 # **My BankBot**
 
+# **🏆🥈 2ème place Hackathon LCL x Google**
+
 ![screenshot](./public/assets/image.png)
 
 ## **Overview**
